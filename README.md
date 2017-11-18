@@ -1,5 +1,5 @@
 # Furniture-Catalog
-There are so many different types of furniture on the market today, and when you have a new empty house to fill or a room to furnish, it can be overwhelming knowing which piece of furniture to choose. Knowing your options before you begin shopping can help you better plan the layout of each room you're furnishing.
+There is variety of furniture available in the market now days. If you wish to upgrade your home or fill up an empty house, it is beneficial to know all the options before you go for shopping. This catalog will help you browse through all the options. Product sellers can add furniture data to let people know about new items available in the market.
 
 ## Prerequisites
 
