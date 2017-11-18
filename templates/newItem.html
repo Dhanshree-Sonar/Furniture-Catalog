@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Item</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+
+    <div class="top-bar">
+      <div class="title">Furniture Catalog</div>
+      <div class="login-logout">
+        {% if 'username' not in session %}
+          <a href="{{ url_for('showLogin') }}" class="log-name">Login</a>
+        {% else %}
+          <a href="{{ url_for('gdisconnect') }}" class="log-name">Logout</a>
+        {% endif %}
+      </div>
+      {% if 'username' in session %}
+        <div class="user-info">
+          <img src="{{user.picture}}" alt="Profile Picture" class="profile-picture">
+          Hi {{user.name}}!
+        </div>
+      {% endif %}
+      <div class="messages">
+        {% with messages = get_flashed_messages()%}
+          {% if messages %}
+            <ul>
+              {% for message in messages %}
+                <li><em> {{ message }} </em></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+
+    <div class="pane">
+
+      <div class = "side-bar">
+        <h2>Categories</h2>
+        {% for category in categories: %}
+          <p class="category">
+            <a href="{{ url_for('showItems', cat_id = category.id) }}" class = "name">
+              <strong> {{category.name}} </strong><br>
+            </a>
+            {% if user.id == category.user_id %}
+              <em><a href="{{ url_for('editCategory', cat_id = category.id) }}" class = "edit">Edit</a></em> /
+              <em><a href="{{ url_for('deleteCategory', cat_id = category.id) }}" class = "delete">Delete</a></em>
+            {% endif %}
+          </p>
+        {% endfor %}
+        <div class="create-new-category">
+            <em><a href='{{ url_for('newCategory') }}' class="new-category">Create New Category</a></em>
+        </div>
+      </div>
+
+      <div class="work-area">
+
+      <h3>Create New Item for Category {{category.name}}:</h3>
+
+      <div class="add-new-item">
+        <form action="{{ url_for('newItem', cat_id = category.id) }}" method="post">
+              <strong><label for="">Enter details for item:</label></strong><br><br>
+
+              <label for="">Name: </label>
+              <input type="text" name="new_name" placeholder="Enter name here.."><br><br>
+              <label for="">Description: </label><br>
+              <textarea rows="4" cols="50" name="new_description" placeholder="Enter description here.."></textarea>
+              <br><br>
+              <input type="submit" value="Create" class="btn">
+              <a href="{{ url_for('showItems', cat_id = category.id) }}" class="cancle">Cancel</a>
+        </form>
+      </div>
+    </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Menu Items</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+
+    <div class="top-bar">
+      <div class="title">Furniture Catalog</div>
+      <div class="login-logout">
+        {% if 'username' not in session %}
+          <a href="{{ url_for('showLogin') }}" class="log-name">Login</a>
+        {% else %}
+          <a href="{{ url_for('gdisconnect') }}" class="log-name">Logout</a>
+        {% endif %}
+      </div>
+      {% if 'username' in session %}
+        <div class="user-info">
+          <img src="{{user.picture}}" alt="Profile Picture" class="profile-picture">
+          Hi {{user.name}}!
+        </div>
+      {% endif %}
+      <div class="messages">
+        {% with messages = get_flashed_messages()%}
+          {% if messages %}
+            <ul>
+              {% for message in messages %}
+                <li><em> {{ message }} </em></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+
+    <div class="pane">
+
+      <div class = "side-bar">
+        <h2>Categories</h2>
+        {% for category in categories: %}
+          <p class="category">
+            <a href="{{ url_for('showItems', cat_id = category.id) }}" class = "name">
+              <strong> {{category.name}} </strong><br>
+            </a>
+          </p>
+        {% endfor %}
+      </div>
+
+      <div class="work-area">
+        <h3>{{ item.name }} ({{category.name}})</h3>
+        <br>
+        <div class="description">
+            Description : {{item.description}}<br><br>
+        </div>
+        <div class="all-items">
+            <em><a href="{{ url_for('showItems', cat_id = category.id) }}" class="all-items">{{category.name}} Item(s)</a></em>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

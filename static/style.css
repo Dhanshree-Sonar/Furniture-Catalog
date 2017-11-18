@@ -1,0 +1,183 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #993300;
+  height: 100%;
+  background: url("/static/background.jpg");
+}
+
+.top-bar{
+  height: 80px;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+  border: 3px solid #662200;
+  background-color: #662200;
+}
+
+a{
+  text-decoration: none;
+}
+h3, h2{
+  margin: 5px;
+}
+
+#signinButton{
+  display: block;
+  float: right;
+  top: 20%;
+  right: 10%;
+  position: absolute;
+}
+
+.title{
+  left: 10%;
+  margin: 10px 10px 10px 0px;
+  position: absolute;
+  font-size: 220%;
+  display: inline-block;
+  color: white;
+}
+
+.login-logout{
+  right: 10%;
+  position: absolute;
+  display: inline-block;
+  float: right;
+  margin: 10px;
+  padding: 5px 15px 5px 15px;
+  font-size: 150%;
+  background-color: white;
+}
+.log-name{
+  color: #662200;
+}
+.log-name:hover{
+  font-style: italic;
+}
+
+.profile-picture{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.messages{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  color: white;
+  top: 8%;
+  left: 10%;
+  font-size: 80%;
+}
+
+.user-info{
+  position: absolute;
+  display: inline-block;
+  float: right;
+  color: white;
+  top: 8%;
+  right: 10%;
+  font-size: 80%;
+}
+
+.pane{
+  left: 10%;
+  right: 10%;
+  top: 16%;
+  bottom: 5%;
+  border: 3px solid #662200;
+  position: absolute;
+  display: block;
+  background-color: #ffe6cc;
+}
+
+.side-bar{
+  display: inline-block;
+  float: left;
+  font-size: 100%;
+  border-right: 3px solid #662200;
+  height: 96%;
+  width: 30%;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.category{
+  font-size: 100%;
+  padding: 5px;
+  margin: 0px;
+}
+.name:hover{
+  color: white;
+  background-color: #993300;
+  font-style: italic;
+}
+
+.name{
+  color: #993300;
+  width: 100%;
+  padding: 5px 5px 5px 0px;
+}
+
+.new-category, .all-items, .new-item{
+  bottom: 5%;
+  width: 100%;
+  color: #993300;
+  font-size: 100%;
+  padding: 5px;
+}
+
+.new-category{
+  position: absolute;
+}
+
+.all-items, .new-item{
+  position: relative;
+}
+
+.edit, .delete{
+  color: #993300;
+  font-size: 80%;
+  padding: 5px;
+}
+
+.work-area{
+  display: inline-block;
+  color: #993300;
+  margin: 10px 10px 10px 30px;
+  position: absolute;
+}
+.recent-items, .item-name{
+  padding: 5px;
+  margin: 0px;
+}
+
+.recent-item-name, .item-name{
+  color: #993300;
+}
+
+.recent-item-name:hover{
+  font-style: italic;
+}
+
+.edit-cat, .delete-cat, .new-cat, .description, .add-new-item, .delete-item, .edit-item{
+  color: #993300;
+  font-size: 100%;
+  padding: 5px;
+  margin: 0px;
+}
+.cancle{
+  color: #993300;
+  font-size: 100%;
+  padding: 5px;
+}
+.btn {
+	padding: 5px;
+  background-color: #662200;
+  color: white;
+  font-size: 90%;
+}
+.btn:hover {
+	font-style: italic;
+}
