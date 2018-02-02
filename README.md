@@ -14,6 +14,15 @@ There is variety of furniture available in the market now days. If you wish to u
 3. Run `vagrant ssh`
 4. On terminal change directory to vagrant directory `cd \vagrant` and place all the files and folders from this repo into it.
 
+## Built with
+
+1. Python
+2. Flask framework
+3. SQLAlchemy
+4. Google OAuth
+5. json module to provide endpoint urls
+6. httplib2 module to handle HTTP requests
+
 ## How to run the furniture catalog
 
 1. On terminal change directory to `vagrant` directory and run `vagrant up`.
