@@ -47,4 +47,4 @@ There is variety of furniture available in the market now days. If you wish to u
 1. For all category names in database: `localhost:5000/categories/JSON`
 2. For items in particular category: `localhost:5000/category/<int:cat_id>/items/JSON`
 3. For all items in database: `localhost:5000/items/JSON`
-3. For particular item details: `localhost:5000/item/<int:item_id>/JSON`
+4. For particular item details: `localhost:5000/item/<int:item_id>/JSON`
