@@ -32,7 +32,6 @@ session = DBSession()
 # Authenticating a user using Google
 @app.route('/gconnect', methods=['POST'])
 def gconnect():
-    print "Enter Gconn"
     # Validate state token
     if request.args.get('state') != login_session['state']:
         response = make_response(json.dumps('Invalid state parameter.'), 401)
@@ -120,7 +119,6 @@ def gconnect():
     output += ' " style = "width: 300px; height: 300px;border-radius: 150px;'
     output += '-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '
     flash("You are now logged in as %s" % login_session['username'])
-    print "done!"
     return output
 
 
