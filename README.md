@@ -16,12 +16,12 @@ There is variety of furniture available in the market now days. If you wish to u
 
 ## Built with
 
-1. Python
-2. Flask framework
-3. SQLAlchemy
-4. Google OAuth
-5. json module to provide endpoint urls
-6. httplib2 module to handle HTTP requests
+1. [Python](https://www.python.org/doc/)
+2. [Flask Framework](http://flask.pocoo.org/docs/0.12/)
+3. [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/)
+4. [Google OAuth](https://developers.google.com/identity/protocols/OAuth2)
+5. [json](https://help.zendesk.com/hc/en-us/articles/229136867-Working-with-JSON) module to provide endpoint urls
+6. [httplib2](http://httplib2.readthedocs.io/en/latest/) module to handle HTTP requests
 
 ## How to run the furniture catalog
 
