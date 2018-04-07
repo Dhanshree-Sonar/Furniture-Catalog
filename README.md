@@ -1,5 +1,5 @@
 # Furniture-Catalog
-There is variety of furniture available in the market now days. If you wish to upgrade your home or fill up an empty house, it is beneficial to know all the options before you go for shopping. This catalog will help you browse through all the options. Product sellers can add furniture data to let people know about new items available in the market.
+There is a variety of furniture available in the market nowadays. If you wish to upgrade your home or fill up an empty house, it is beneficial to know all the choices before you go purchasing. This catalog will help you browse through all the options. Product sellers can add furniture data to let people know about new items available in the market.
 
 ## Prerequisites
 
